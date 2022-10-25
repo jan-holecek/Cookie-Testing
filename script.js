@@ -49,7 +49,7 @@ const checkCookie = () => {
         username = prompt("Zadejte vaše jméno:");
         // zkontroluje zda je username z prompt správně zadán
         if (username != "" || username != null || username != "null") {
-            // vytvoří novou složku cookies 
+            // vytvoří nový soubor cookies 
             setCookie("username", username, 30);
         }
     // toto se vykoná pokud username existuje
@@ -58,9 +58,7 @@ const checkCookie = () => {
         body.innerHTML = 
         `
         <h1 class="yourName">Vaše jméno je ${username}</h1> 
-        <button onclick="deleteCookie('username')">Smazat složku z cookies</button>
+        <button onclick="deleteCookie('username')">Smazat soubor cookies</button>
         `
     }
 }
-
-
